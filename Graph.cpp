@@ -97,6 +97,19 @@ Node *Graph::getLastNode()
 */
 void Graph::insertNode(int id)
 {
+    if (this->first_node == nullptr) //caso seja primeiro nó do grafo
+    {
+        Node no(id);
+        this->first_node = no;
+        this->last_node = this->first_node;
+    }else if (this->last_node = this->first_node) //caso seja segundo nó do grafo
+    {
+        Node no(id);
+        this->last_node = no;
+    }else  //terceiro nó em diante
+    {
+        Node no(id);
+    }
     
 }
 
