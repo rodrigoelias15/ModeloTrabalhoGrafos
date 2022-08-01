@@ -104,7 +104,8 @@ int menu(){
 
     cout << "MENU" << endl;
     cout << "----" << endl;
-    cout << "[1] Subgrafo induzido por conjunto de vértices" << endl;
+    cout << "[1] Fecho Transitivo Direto" << endl;
+/*     cout << "[1] Subgrafo induzido por conjunto de vértices" << endl;
     cout << "[2] Caminho Mínimo entre dois vértices - Dijkstra" << endl;
     cout << "[3] Caminho Mínimo entre dois vértices - Floyd" << endl;
     cout << "[4] Árvore Geradora Mínima de Prim" << endl;
@@ -113,9 +114,10 @@ int menu(){
     cout << "[7] Imprimir ordenacao topológica" << endl;
     cout << "[8] Algoritmo Guloso" << endl;
     cout << "[9] Algoritmo Guloso Randomizado " << endl;
-    cout << "[10] Algoritmo Guloso Randomizado Reativo" << endl;
-    cout << "[0] Sair" << endl;
+    cout << "[10] Algoritmo Guloso Randomizado Reativo" << endl; */
+    cout << "[0] Sair" << endl << endl;
 
+    cout << "Escolha uma opção: ";
     cin >> selecao;
 
     return selecao;
@@ -126,11 +128,18 @@ void selecionar(int selecao, Graph* graph, ofstream& output_file){
 
     switch (selecao) {
 
-        //Subgrafo induzido por um conjunto de vértices X;
+            // Fecho Transitivo Direto
         case 1:{
 
             break;
         }
+        
+        /* //Subgrafo induzido por um conjunto de vértices X;
+        case 1:{
+
+            break;
+        } */
+
             //Caminho mínimo entre dois vértices usando Dijkstra;
         case 2:{
 
@@ -170,7 +179,7 @@ void selecionar(int selecao, Graph* graph, ofstream& output_file){
         }
         default:
         {
-            cout << " Error!!! invalid option!!" << endl;
+            cout << "Opção Inválida! Saindo do programa..." << endl;
         }
 
     }
@@ -236,7 +245,7 @@ int main(int argc, char const *argv[]) {
         cout << "Unable to open " << argv[1];
 
 
-    mainMenu(output_file, graph);
+    // mainMenu(output_file, graph);
 
 
 
